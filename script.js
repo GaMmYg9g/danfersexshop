@@ -3,7 +3,7 @@
 // ============================================
 
 // Configuración - CAMBIA AQUÍ TU NÚMERO
-const WHATSAPP_NUMBER = "5356502201";
+const WHATSAPP_NUMBER = "5356502201"; // ← TU NÚMERO AQUÍ
 const TIENDA_NOMBRE = "LUXURIA SHOP";
 
 // Estado
