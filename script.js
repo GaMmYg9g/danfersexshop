@@ -1,8 +1,8 @@
 // ============================================
-// LUXURIA SHOP - LÓGICA PRINCIPAL (CORREGIDA)
+// LUXURIA SHOP - LÓGICA PRINCIPAL (CARRITO MEJORADO)
 // ============================================
 
-// Configuración - AHORA USA EL NÚMERO DE WHATSAPP DESDE CONFIG
+// Configuración
 const WHATSAPP_NUMBER = localStorage.getItem('luxuriaWhatsApp') || "5356502201";
 const TIENDA_NOMBRE = "LUXURIA SHOP";
 
@@ -20,6 +20,7 @@ const carritoItems = document.getElementById('carritoItems');
 const totalCarrito = document.getElementById('totalCarrito');
 const subtotalCarrito = document.getElementById('subtotalCarrito');
 const realizarPedidoBtn = document.getElementById('realizarPedido');
+const vaciarCarritoBtn = document.getElementById('vaciarCarrito'); // NUEVO
 const registroModal = document.getElementById('registroModal');
 const cerrarRegistroBtn = document.getElementById('cerrarRegistroModal');
 const formularioRegistro = document.getElementById('formularioRegistro');
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     verCarritoBtn.addEventListener('click', abrirCarrito);
     cerrarCarritoBtn.addEventListener('click', cerrarCarritoModal);
     realizarPedidoBtn.addEventListener('click', procesarPedido);
+    if (vaciarCarritoBtn) vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
     cerrarRegistroBtn.addEventListener('click', () => cerrarModal(registroModal));
     formularioRegistro.addEventListener('submit', guardarRegistro);
     seguirComprando.addEventListener('click', () => cerrarModal(confirmacionModal));
@@ -162,7 +164,7 @@ function agregarAlCarrito(productoId) {
     guardarCarrito();
     actualizarContadorCarrito();
     
-    // Feedback visual sutil
+    // Feedback visual
     const btn = event.target;
     btn.style.transform = 'scale(0.95)';
     setTimeout(() => btn.style.transform = 'scale(1)', 200);
@@ -194,13 +196,24 @@ function actualizarCantidad(productoId, nuevaCantidad) {
     abrirCarrito(); // Refrescar vista
 }
 
+function vaciarCarrito() {
+    if (carrito.length === 0) return;
+    
+    if (confirm('¿Vaciar todo el carrito?')) {
+        carrito = [];
+        guardarCarrito();
+        actualizarContadorCarrito();
+        abrirCarrito();
+    }
+}
+
 function guardarCarrito() {
     localStorage.setItem('luxuriaCarrito', JSON.stringify(carrito));
 }
 
 function actualizarContadorCarrito() {
     const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
-    contadorCarrito.textContent = totalItems;
+    if (contadorCarrito) contadorCarrito.textContent = totalItems;
 }
 
 function calcularTotales() {
@@ -301,7 +314,6 @@ function enviarPedidoWhatsApp() {
     const { total } = calcularTotales();
     const numeroPedidoGenerado = generarNumeroPedido();
     
-    // Crear mensaje
     let mensaje = `*${TIENDA_NOMBRE} - NUEVO PEDIDO*%0A%0A`;
     mensaje += `*Cliente:* ${usuario.nombre}%0A`;
     mensaje += `*Teléfono:* ${usuario.telefono}%0A`;
@@ -315,18 +327,14 @@ function enviarPedidoWhatsApp() {
     mensaje += `%0A*TOTAL: $${total.toFixed(2)}*%0A%0A`;
     mensaje += `_Pedido generado automáticamente_`;
     
-    // Abrir WhatsApp con el número configurado
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${mensaje}`, '_blank');
     
-    // Guardar pedido en historial
     guardarPedido(numeroPedidoGenerado, total);
     
-    // Mostrar confirmación
     numeroPedido.textContent = `#${numeroPedidoGenerado}`;
     totalConfirmacion.textContent = `Total: $${total.toFixed(2)}`;
     confirmacionModal.classList.add('active');
     
-    // Vaciar carrito
     carrito = [];
     guardarCarrito();
     actualizarContadorCarrito();
@@ -338,7 +346,6 @@ function generarNumeroPedido() {
     const mes = String(fecha.getMonth() + 1).padStart(2, '0');
     const dia = String(fecha.getDate()).padStart(2, '0');
     const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
-    
     return `LUX-${año}${mes}${dia}-${random}`;
 }
 
@@ -350,13 +357,13 @@ function guardarPedido(numero, total) {
         productos: carrito,
         total
     };
-    
     const historial = JSON.parse(localStorage.getItem('luxuriaHistorial')) || [];
     historial.push(pedido);
     localStorage.setItem('luxuriaHistorial', JSON.stringify(historial));
 }
 
-// Hacer funciones globales para los onclick
+// Hacer funciones globales
 window.agregarAlCarrito = agregarAlCarrito;
 window.eliminarDelCarrito = eliminarDelCarrito;
 window.actualizarCantidad = actualizarCantidad;
+window.vaciarCarrito = vaciarCarrito;
