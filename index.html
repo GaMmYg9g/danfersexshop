@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Luxuria Shop - Elegancia y Deseo</title>
     
     <!-- PWA meta tags -->
@@ -14,11 +14,116 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Font Awesome para iconos -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* ESTILOS ADICIONALES PARA EL CARRITO */
+        .modal-contenido {
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            max-height: 800px;
+        }
+
+        .modal-header {
+            flex-shrink: 0;
+        }
+
+        .modal-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .modal-footer {
+            flex-shrink: 0;
+            border-top: 2px solid var(--borgoña);
+            background-color: var(--negro-suave);
+            padding: 1.5rem;
+        }
+
+        .footer-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn-vaciar {
+            background: none;
+            border: 2px solid #B71C1C;
+            color: #B71C1C;
+            padding: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-vaciar:hover {
+            background-color: #B71C1C;
+            color: #F2EDE8;
+        }
+
+        .btn-pedido {
+            flex: 2;
+            background: linear-gradient(135deg, #6D0F2B, #8a1a3a);
+            border: none;
+            color: #F2EDE8;
+            padding: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .resumen-carrito {
+            background-color: #0E0E0E;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .subtotal, .envio, .total-carrito {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+        }
+
+        .envio {
+            color: #888;
+        }
+
+        .gratis {
+            color: #2E7D32;
+        }
+
+        .total-carrito {
+            font-size: 1.3rem;
+            border-top: 1px dashed #333;
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+        }
+
+        .total-carrito span:last-child {
+            color: #B89B5E;
+        }
+    </style>
 </head>
 <body>
-    <!-- HEADER ELEGANTE -->
+    <!-- HEADER -->
     <header>
         <div class="header-container">
             <div class="logo-wrapper">
@@ -51,24 +156,26 @@
             </div>
         </div>
 
-        <!-- GRID DE PRODUCTOS -->
+        <!-- PRODUCTOS -->
         <section class="productos-section">
             <div class="productos-grid" id="productosContainer">
-                <!-- Los productos se cargan aquí dinámicamente -->
+                <!-- Los productos se cargan aquí -->
             </div>
         </section>
     </main>
 
-    <!-- MODAL CARRITO -->
+    <!-- MODAL CARRITO (CORREGIDO) -->
     <div id="carritoModal" class="modal">
         <div class="modal-contenido">
             <div class="modal-header">
                 <h2><i class="fas fa-shopping-bag"></i> TU CARRITO</h2>
                 <button class="cerrar-modal" id="cerrarModal">&times;</button>
             </div>
+            
             <div class="modal-body" id="carritoItems">
                 <!-- Items del carrito -->
             </div>
+            
             <div class="modal-footer">
                 <div class="resumen-carrito">
                     <div class="subtotal">
@@ -77,16 +184,22 @@
                     </div>
                     <div class="envio">
                         <span>ENVÍO</span>
-                        <span class="gratis">GRATIS</span>
+                        <span class="gratis">Gratis por ahora</span>
                     </div>
                     <div class="total-carrito">
                         <span>TOTAL</span>
                         <span id="totalCarrito">$0</span>
                     </div>
                 </div>
-                <button class="btn-pedido" id="realizarPedido">
-                    REALIZAR PEDIDO <i class="fas fa-arrow-right"></i>
-                </button>
+                
+                <div class="footer-buttons">
+                    <button class="btn-vaciar" id="vaciarCarrito">
+                        <i class="fas fa-trash"></i> VACIAR
+                    </button>
+                    <button class="btn-pedido" id="realizarPedido">
+                        REALIZAR PEDIDO <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -95,7 +208,7 @@
     <div id="registroModal" class="modal">
         <div class="modal-contenido modal-small">
             <div class="modal-header">
-                <h2><i class="fas fa-user"></i> COMPLETA TUS DATOS</h2>
+                <h2><i class="fas fa-user"></i> TUS DATOS</h2>
                 <button class="cerrar-modal" id="cerrarRegistroModal">&times;</button>
             </div>
             <div class="modal-body">
