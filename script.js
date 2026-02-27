@@ -3,7 +3,7 @@
 // ============================================
 
 // Configuración - AHORA USA EL NÚMERO DE WHATSAPP DESDE CONFIG
-const WHATSAPP_NUMBER = localStorage.getItem('luxuriaWhatsApp') || "1234567890";
+const WHATSAPP_NUMBER = localStorage.getItem('luxuriaWhatsApp') || "5356502201";
 const TIENDA_NOMBRE = "LUXURIA SHOP";
 
 // Estado de la aplicación
