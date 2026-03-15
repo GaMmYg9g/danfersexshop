@@ -2,7 +2,7 @@
 // LUXURIA SHOP - LÓGICA PRINCIPAL
 // ============================================
 
-const WHATSAPP_NUMBER = "5356502201";
+const WHATSAPP_NUMBER = "5355902776";
 const TIENDA_NOMBRE = "LUJURIA SEX SHOP";
 
 // Mapa de colores
@@ -208,11 +208,11 @@ function cargarCategorias() {
     const categoriasUnicas = [...new Set(todasCategorias)].sort();
     
     let html = '';
+    html += '<button class="categoria active" data-categoria="todos">TODOS</button>';
     html += '<button class="categoria" data-orden="caro">MÁS CARO</button>';
     html += '<button class="categoria" data-orden="barato">MÁS BARATO</button>';
     html += '<button class="categoria" data-categoria="ofertas">OFERTAS</button>';
-    html += '<button class="categoria" data-categoria="descuentos">DESCUENTOS</button>';
-    html += '<button class="categoria active" data-categoria="todos">TODOS</button>';
+    html += '<button class="categoria" data-categoria="descuentos">DESCUENTOS</button>';    
     
     categoriasUnicas.forEach(cat => {
         html += `<button class="categoria" data-categoria="${cat}">${cat.toUpperCase()}</button>`;
@@ -229,6 +229,10 @@ function cargarCategorias() {
                 ordenActual = btn.dataset.orden;
             } else {
                 filtroCategoria = btn.dataset.categoria;
+                // Si se hace clic en TODOS, resetear el orden
+                if (filtroCategoria === 'todos') {
+                    ordenActual = null;
+                }
             }
             filtrarProductos();
         });
@@ -350,7 +354,7 @@ function renderizarProductos(array) {
         const nombreId = p.nombre.replace(/[^a-zA-Z0-9]/g, '_');
         
         let selectorHTML = '';
-        if (p.colores.length > 1) {
+        if (p.colores.length > 0) {
             const opciones = p.colores.map((color, idx) => {
                 const colorLower = color.toLowerCase();
                 const bgColor = colorMap[colorLower] || '#ccc';
@@ -815,7 +819,6 @@ function generarYEnviarMensaje() {
     let mensajeTexto = `*${TIENDA_NOMBRE} - NUEVO PEDIDO*\n\n`;
     mensajeTexto += `*Cliente:* ${usuario.nombre || ''}\n`;
     mensajeTexto += `*Teléfono:* ${usuario.telefono || ''}\n`;
-    mensajeTexto += `*Dirección:* ${direccionCompleta}\n`;
     mensajeTexto += `*Pedido:* ${numPedido}\n\n`;
     mensajeTexto += `*PRODUCTOS*\n`;
     
@@ -827,6 +830,7 @@ function generarYEnviarMensaje() {
     });
     
     mensajeTexto += `\n*TOTAL: $${total.toFixed(2)}*\n\n`;
+    mensajeTexto += `*Dirección:* ${direccionCompleta}\n\n`;
     mensajeTexto += `Tienda: ${tiendaUrl}`;
     
     console.log("📨 Mensaje generado:\n", mensajeTexto);
