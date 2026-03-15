@@ -14,6 +14,7 @@ const productosData = {
             fechaAgregado: "2026-03-12",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -33,6 +34,7 @@ const productosData = {
             fechaAgregado: "2026-03-12",
             oferta: false,
             descuento: 20,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -50,6 +52,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -68,6 +71,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -85,6 +89,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },        
         {
@@ -102,6 +107,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },        
         {
@@ -119,6 +125,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -131,6 +138,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -149,6 +157,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -164,6 +173,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -181,6 +191,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -196,6 +207,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -211,6 +223,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -226,6 +239,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -239,6 +253,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -252,6 +267,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -265,6 +281,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -278,6 +295,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -291,6 +309,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -304,6 +323,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -316,6 +336,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -329,6 +350,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -341,6 +363,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -356,6 +379,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -371,6 +395,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -386,6 +411,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -403,6 +429,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -420,6 +447,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -437,6 +465,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -454,6 +483,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -471,6 +501,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -488,6 +519,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -505,6 +537,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -520,6 +553,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -537,6 +571,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -554,6 +589,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -571,6 +607,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -589,6 +626,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -603,6 +641,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -616,6 +655,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -633,6 +673,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -650,6 +691,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -665,6 +707,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -680,6 +723,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -694,9 +738,10 @@ const productosData = {
             color: "Rosado",
             vibración: "Constante",
             fechaAgregado: "2026-03-10",
-            oferta: true,
+            oferta: false,
             descuento: 0,
-            etiquetaOferta: "OFERTA"
+            rebaja: 0,
+            etiquetaOferta: ""
         },
         {
             nombre: "Masturbador Vibrador Realista Masculino",
@@ -711,6 +756,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -726,6 +772,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -740,6 +787,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -758,6 +806,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -776,6 +825,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -791,6 +841,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -805,6 +856,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -818,6 +870,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -833,6 +886,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -851,6 +905,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -864,6 +919,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -877,6 +933,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -894,6 +951,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -909,6 +967,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -926,6 +985,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
         {
@@ -942,6 +1002,7 @@ const productosData = {
             fechaAgregado: "2026-03-10",
             oferta: false,
             descuento: 0,
+            rebaja: 0,
             etiquetaOferta: ""
         },
     ]
