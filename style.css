@@ -334,6 +334,7 @@ header {
     box-shadow: 0 15px 30px rgba(109, 15, 43, 0.4);
 }
 
+/* ===== IMAGEN DEL PRODUCTO (ANCHO COMPLETO, ALTURA VARIABLE) ===== */
 .producto-imagen-wrapper {
     width: 100%;
     background-color: var(--negro-suave);
@@ -345,9 +346,8 @@ header {
 
 .producto-imagen {
     width: 100%;
-    height: auto;
-    max-height: 280px; /* Un poco más pequeña */
-    object-fit: cover;
+    min-height: auto;
+    height: auto;           /* Altura automática, respeta proporción */
     display: block;
     transition: var(--transicion);
 }
