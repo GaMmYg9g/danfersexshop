@@ -1,4 +1,4 @@
-const CACHE_NAME = 'luxuria-v3';
+const CACHE_NAME = 'luxuria-v4';
 const urlsToCache = [
   '/',
   '/index.html',
