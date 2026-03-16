@@ -1,4 +1,4 @@
-const CACHE_NAME = 'danfer-v1';
+const CACHE_NAME = 'danfer-v2';
 const urlsToCache = [
   '/',
   '/index.html',
