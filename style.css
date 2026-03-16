@@ -659,8 +659,8 @@ header {
     font-size: 0.85rem;
     font-weight: 600;
     background: linear-gradient(135deg, var(--borgoña), var(--borgoña-claro));
-    border: none;
-    color: var(--marfil);
+    border-color: var(--dorado);
+    color: var(--dorado);
     cursor: pointer;
     transition: var(--transicion);
     width: 100%;
