@@ -1,4 +1,4 @@
-const CACHE_NAME = 'danfer-v2';
+const CACHE_NAME = 'danfer-v1';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -7,9 +7,7 @@ const urlsToCache = [
   '/productos.js',
   '/manifest.json',
   '/img/logo.jpg',
-  '/img/default-product.jpg',
-  '/img/icon-192.png',
-  '/img/icon-512.png'
+  '/img/default-product.jpg'
 ];
 
 self.addEventListener('install', event => {
